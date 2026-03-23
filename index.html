@@ -566,6 +566,20 @@ footer a:hover { color: #d4a574; }
   
   .gallery-item-comparativa { grid-template-columns: 1fr; }
 }
+
+/* Imagen completa (sin recorte) */
+.gallery-item-simple img.img-completa {
+  object-fit: contain;
+  background: #f9f5f0;
+  height: auto; /* ← CLAVE: alto automático */
+  max-height: 950px; /* ← Máximo 250px pero respeta proporción */
+  width: 100%;
+}
+
+/* Ajustar el contenedor para que no tenga overflow hidden */
+.gallery-item-simple:has(img.img-completa) {
+  overflow: visible; /* ← Permite que la imagen se vea completa */
+}
 </style>
 </head>
 <body>
@@ -717,12 +731,12 @@ footer a:hover { color: #d4a574; }
       </div>
       
       <!-- Box 4: DETALLE SERVICIO -->
-      <div class="gallery-item-simple">
-        <img src="img/galeria/corte.jpg" alt="Detalle de corte">
-        <div class="gallery-caption">
-          <span>✂️ Detalle de Corte</span>
-        </div>
-      </div>
+<div class="gallery-item-simple">
+  <img src="img/galeria/corte.jpg" alt="Detalle de corte" class="img-completa">
+  <div class="gallery-caption">
+    <span>✂️ Detalle de Corte</span>
+  </div>
+</div>
       
     </div>
     
