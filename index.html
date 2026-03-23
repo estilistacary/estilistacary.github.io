@@ -92,7 +92,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   object-fit: cover;
-  opacity: 1; /* 100% VISIBLE */
+  opacity: 1;
 }
 .fondo-loop::after {
   content: '';
@@ -165,12 +165,8 @@ body {
 }
 
 @keyframes borderGlow {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
 /* ==========================================
@@ -194,10 +190,7 @@ body {
   transform: translateX(-50%);
   width: 150px;
   height: 3px;
-  background: linear-gradient(90deg, 
-    #d4a574 0%, 
-    #f5d76e 50%, 
-    #d4a574 100%);
+  background: linear-gradient(90deg, #d4a574 0%, #f5d76e 50%, #d4a574 100%);
   border-radius: 2px;
   overflow: hidden;
 }
@@ -210,10 +203,7 @@ body {
   transform: translateX(-50%);
   width: 150px;
   height: 3px;
-  background: linear-gradient(90deg, 
-    transparent 0%, 
-    rgba(255, 255, 255, 0.9) 50%, 
-    transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.9) 50%, transparent 100%);
   border-radius: 2px;
   opacity: 0;
   transition: opacity 0.3s;
@@ -225,14 +215,8 @@ body {
 }
 
 @keyframes lineGlow {
-  0%, 100% {
-    transform: translateX(-50%) scaleX(0);
-    opacity: 0;
-  }
-  50% {
-    transform: translateX(-50%) scaleX(1);
-    opacity: 1;
-  }
+  0%, 100% { transform: translateX(-50%) scaleX(0); opacity: 0; }
+  50% { transform: translateX(-50%) scaleX(1); opacity: 1; }
 }
 
 .section p {
@@ -269,22 +253,16 @@ body {
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid #d4a574;
-  box-shadow: 
-    0 8px 24px rgba(212, 165, 116, 0.3),
-    0 0 40px rgba(255, 215, 0, 0.2);
+  box-shadow: 0 8px 24px rgba(212, 165, 116, 0.3), 0 0 40px rgba(255, 215, 0, 0.2);
   transition: all 0.3s ease;
 }
 
 .welcome-image img:hover {
   transform: scale(1.05);
-  box-shadow: 
-    0 12px 32px rgba(212, 165, 116, 0.4),
-    0 0 60px rgba(255, 215, 0, 0.3);
+  box-shadow: 0 12px 32px rgba(212, 165, 116, 0.4), 0 0 60px rgba(255, 215, 0, 0.3);
 }
 
-.welcome-content {
-  flex: 1;
-}
+.welcome-content { flex: 1; }
 
 /* Mensaje de bienvenida destacado */
 .welcome-highlight {
@@ -308,10 +286,7 @@ body {
   left: 0;
   width: 4px;
   height: 100%;
-  background: linear-gradient(180deg, 
-    transparent 0%, 
-    #ffd700 50%, 
-    transparent 100%);
+  background: linear-gradient(180deg, transparent 0%, #ffd700 50%, transparent 100%);
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -322,12 +297,8 @@ body {
 }
 
 @keyframes verticalGlow {
-  0%, 100% {
-    transform: translateY(-100%);
-  }
-  50% {
-    transform: translateY(100%);
-  }
+  0%, 100% { transform: translateY(-100%); }
+  50% { transform: translateY(100%); }
 }
 
 /* ==========================================
@@ -344,177 +315,14 @@ body {
   gap: 12px;
   align-items: flex-start;
 }
-.services-list li:last-child {
-  border-bottom: none;
-}
-.services-list .icon {
-  font-size: 1.3rem;
-  min-width: 28px;
-}
-.services-list .desc strong {
-  color: #2e1b1b;
-  display: block;
-  margin-bottom: 4px;
-  font-size: 1.05rem;
-}
-.services-list .desc span {
-  color: #5d4037;
-  font-size: 0.95rem;
-}
+.services-list li:last-child { border-bottom: none; }
+.services-list .icon { font-size: 1.3rem; min-width: 28px; }
+.services-list .desc strong { color: #2e1b1b; display: block; margin-bottom: 4px; font-size: 1.05rem; }
+.services-list .desc span { color: #5d4037; font-size: 0.95rem; }
 
-/* ==========================================
-   GALERÍA
-   ========================================== */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 18px;
-  margin-top: 20px;
-}
-.gallery-item {
-  height: 180px;
-  background: linear-gradient(135deg, #e8d5c4 0%, #d4c1ac 100%);
-  border: 2px solid #d4a574;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #3e2723;
-  font-size: 0.9rem;
-  text-align: center;
-  padding: 12px;
-  transition: all 0.3s ease;
-  font-weight: 500;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  position: relative;
-  overflow: hidden;
-}
-.gallery-item:hover {
-  border-color: #f5d76e;
-  background: linear-gradient(135deg, #d4c1ac 0%, #c4a991 100%);
-  color: #2e1b1b;
-  transform: translateY(-3px);
-  box-shadow: 
-    0 6px 16px rgba(212, 165, 116, 0.3),
-    0 0 20px rgba(255, 215, 0, 0.2);
-}
-
-/* ==========================================
-   BOTÓN WHATSAPP NEÓN
-   ========================================== */
-.whatsapp-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-  color: white;
-  padding: 15px 45px;
-  text-decoration: none;
-  border-radius: 50px;
-  font-size: 1.15rem;
-  font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
-  transition: all 0.3s ease;
-  box-shadow: 
-    0 0 10px rgba(37, 211, 102, 0.5),
-    0 0 20px rgba(37, 211, 102, 0.3),
-    0 5px 15px rgba(0, 0, 0, 0.3);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  position: relative;
-  overflow: hidden;
-}
-.whatsapp-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  transition: left 0.5s;
-}
-.whatsapp-btn:hover {
-  transform: scale(1.05) translateY(-2px);
-  box-shadow: 
-    0 0 15px rgba(37, 211, 102, 0.7),
-    0 0 30px rgba(37, 211, 102, 0.5),
-    0 8px 20px rgba(0, 0, 0, 0.4);
-  border-color: rgba(255, 255, 255, 0.6);
-}
-.whatsapp-btn:hover::before {
-  left: 100%;
-}
-
-/* ==========================================
-   FOOTER
-   ========================================== */
-footer {
-  background: rgba(46, 27, 27, 0.95);
-  color: #f5efe6;
-  text-align: center;
-  padding: 28px 20px;
-  margin-top: 30px;
-  border-top: 3px solid #d4a574;
-  backdrop-filter: blur(5px);
-}
-footer p {
-  margin-bottom: 6px;
-  font-size: 0.95rem;
-}
-footer a {
-  color: #f5efe6;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s;
-}
-footer a:hover {
-  color: #d4a574;
-}
-
-/* ==========================================
-   RESPONSIVE
-   ========================================== */
-@media (max-width: 768px) {
-  .header-video-container {
-    height: 350px;
-  }
-  .header-content h1 {
-    font-size: 2.2rem;
-  }
-  .header-content p {
-    font-size: 1.1rem;
-  }
-  .welcome-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .welcome-image {
-    flex: none;
-    margin-bottom: 20px;
-  }
-  .welcome-image img {
-    width: 200px;
-    height: 200px;
-  }
-  .welcome-highlight {
-    text-align: left;
-  }
-  .section {
-    padding: 35px 25px;
-  }
-  .section h2 {
-    font-size: 1.8rem;
-  }
-  .whatsapp-btn {
-    width: 100%;
-    justify-content: center;
-  }
-}
 /* ==========================================
    GALERÍA MIXTA (Videos + Fotos)
    ========================================== */
-
-/* Contenedor principal de la galería */
 .section .gallery-videos,
 .section .gallery-fotos {
   display: grid;
@@ -523,16 +331,13 @@ footer a:hover {
   margin-top: 20px;
 }
 
-/* Separación entre filas de videos y fotos */
 .section .gallery-videos {
   margin-bottom: 25px;
   padding-bottom: 25px;
   border-bottom: 2px dashed rgba(212, 165, 116, 0.4);
 }
 
-/* ==========================================
-   VIDEOS EN GALERÍA
-   ========================================== */
+/* Videos en galería */
 .gallery-video-item {
   position: relative;
   border: 2px solid #d4a574;
@@ -545,16 +350,19 @@ footer a:hover {
 .gallery-video-item:hover {
   transform: translateY(-3px);
   border-color: #f5d76e;
-  box-shadow: 
-    0 6px 16px rgba(212, 165, 116, 0.3),
-    0 0 20px rgba(255, 215, 0, 0.2);
+  box-shadow: 0 6px 16px rgba(212, 165, 116, 0.3), 0 0 20px rgba(255, 215, 0, 0.2);
 }
 
 .gallery-video-item video {
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
   display: block;
+  transition: transform 0.4s ease; /* ← ZOOM SUAVE */
+}
+
+.gallery-video-item:hover video {
+  transform: scale(1.08); /* ← 8% ZOOM AL HOVER */
 }
 
 .gallery-video-item .gallery-caption {
@@ -566,6 +374,7 @@ footer a:hover {
   color: #f5efe6;
   padding: 10px 12px;
   text-align: center;
+  pointer-events: none;
 }
 
 .gallery-video-item .gallery-caption span {
@@ -580,9 +389,7 @@ footer a:hover {
   color: #d4a574;
 }
 
-/* ==========================================
-   FOTOS COMPARATIVAS (Antes/Después)
-   ========================================== */
+/* Fotos comparativas (Antes/Después) */
 .gallery-item-comparativa {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -596,13 +403,19 @@ footer a:hover {
 .gallery-item-comparativa .foto-antes,
 .gallery-item-comparativa .foto-despues {
   position: relative;
-  height: 200px;
+  height: 250px;
 }
 
 .gallery-item-comparativa img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item-comparativa .foto-antes:hover img,
+.gallery-item-comparativa .foto-despues:hover img {
+  transform: scale(1.08);
 }
 
 .gallery-item-comparativa .label {
@@ -617,9 +430,7 @@ footer a:hover {
   font-weight: 600;
 }
 
-/* ==========================================
-   FOTOS SIMPLES
-   ========================================== */
+/* Fotos simples */
 .gallery-item-simple {
   position: relative;
   border: 2px solid #d4a574;
@@ -632,16 +443,19 @@ footer a:hover {
 .gallery-item-simple:hover {
   transform: translateY(-3px);
   border-color: #f5d76e;
-  box-shadow: 
-    0 6px 16px rgba(212, 165, 116, 0.3),
-    0 0 20px rgba(255, 215, 0, 0.2);
+  box-shadow: 0 6px 16px rgba(212, 165, 116, 0.3), 0 0 20px rgba(255, 215, 0, 0.2);
 }
 
 .gallery-item-simple img {
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
   display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item-simple:hover img {
+  transform: scale(1.08);
 }
 
 .gallery-item-simple .gallery-caption {
@@ -668,32 +482,95 @@ footer a:hover {
 }
 
 /* ==========================================
+   BOTÓN WHATSAPP NEÓN
+   ========================================== */
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: white;
+  padding: 15px 45px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(37, 211, 102, 0.5), 0 0 20px rgba(37, 211, 102, 0.3), 0 5px 15px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.whatsapp-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 0 15px rgba(37, 211, 102, 0.7), 0 0 30px rgba(37, 211, 102, 0.5), 0 8px 20px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.whatsapp-btn:hover::before { left: 100%; }
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+footer {
+  background: rgba(46, 27, 27, 0.95);
+  color: #f5efe6;
+  text-align: center;
+  padding: 28px 20px;
+  margin-top: 30px;
+  border-top: 3px solid #d4a574;
+  backdrop-filter: blur(5px);
+}
+footer p { margin-bottom: 6px; font-size: 0.95rem; }
+footer a { color: #f5efe6; text-decoration: none; font-weight: 600; transition: color 0.2s; }
+footer a:hover { color: #d4a574; }
+
+/* ==========================================
    RESPONSIVE MÓVIL
    ========================================== */
 @media (max-width: 768px) {
+  .header-video-container { height: 350px; }
+  .header-content h1 { font-size: 2.2rem; }
+  .header-content p { font-size: 1.1rem; }
+  
+  .welcome-container { flex-direction: column; text-align: center; }
+  .welcome-image { flex: none; margin-bottom: 20px; }
+  .welcome-image img { width: 200px; height: 200px; }
+  .welcome-highlight { text-align: left; }
+  
+  .section { padding: 35px 25px; }
+  .section h2 { font-size: 1.8rem; }
+  
+  .whatsapp-btn { width: 100%; justify-content: center; }
+  
   .section .gallery-videos,
-  .section .gallery-fotos {
-    grid-template-columns: 1fr;
-  }
+  .section .gallery-fotos { grid-template-columns: 1fr; }
   
   .gallery-video-item video,
   .gallery-item-simple img,
   .gallery-item-comparativa .foto-antes,
-  .gallery-item-comparativa .foto-despues {
-    height: 180px;
-  }
+  .gallery-item-comparativa .foto-despues { height: 200px; }
   
-  .gallery-item-comparativa {
-    grid-template-columns: 1fr;
-  }
+  .gallery-item-comparativa { grid-template-columns: 1fr; }
 }
 </style>
 </head>
 <body>
 
-<!-- ==========================================
-     VIDEO DE CABECERA (Banner principal)
-     ========================================== -->
+<!-- VIDEO DE CABECERA -->
 <div class="header-video-container">
   <video class="header-video" autoplay muted playsinline>
     <source src="img/video-cabecera.mp4" type="video/mp4">
@@ -705,9 +582,7 @@ footer a:hover {
   </div>
 </div>
 
-<!-- ==========================================
-     VIDEO DE FONDO EN LOOP
-     ========================================== -->
+<!-- VIDEO DE FONDO EN LOOP -->
 <div class="fondo-loop">
   <video autoplay muted loop playsinline>
     <source src="img/fondo.mp4" type="video/mp4">
@@ -762,98 +637,99 @@ footer a:hover {
     </ul>
   </section>
 
-<!-- 3. GALERÍA MIXTA (Videos + Fotos) -->
-<section class="section">
-  <h2>Galería de Transformaciones</h2>
-  
-  <!-- FILA 1: VIDEOS -->
-  <div class="gallery-videos">
-    <div class="gallery-video-item">
-      <video autoplay muted loop playsinline>
-        <source src="img/galeria/video-trabajo-1.mp4" type="video/mp4">
-        Tu navegador no soporta video HTML5.
-      </video>
-      <div class="gallery-caption">
-        <span>✨ Proceso de Color</span>
-        <small>Balayage en acción</small>
+  <!-- 3. GALERÍA MIXTA (Videos + Fotos) -->
+  <section class="section">
+    <h2>Galería de Transformaciones</h2>
+    
+    <!-- FILA 1: VIDEOS -->
+    <div class="gallery-videos">
+      <div class="gallery-video-item">
+        <video autoplay muted loop playsinline>
+          <source src="img/galeria/video-trabajo-1.mp4" type="video/mp4">
+          Tu navegador no soporta video HTML5.
+        </video>
+        <div class="gallery-caption">
+          <span>✨ Proceso de Color</span>
+          <small>Balayage en acción</small>
+        </div>
+      </div>
+      
+      <div class="gallery-video-item">
+        <video autoplay muted loop playsinline>
+          <source src="img/galeria/video-trabajo-2.mp4" type="video/mp4">
+          Tu navegador no soporta video HTML5.
+        </video>
+        <div class="gallery-caption">
+          <span>💇‍♀️ Corte & Estilo</span>
+          <small>Transformación en tiempo real</small>
+        </div>
+      </div>
+      
+      <div class="gallery-video-item">
+        <video autoplay muted loop playsinline>
+          <source src="img/galeria/video-trabajo-3.mp4" type="video/mp4">
+          Tu navegador no soporta video HTML5.
+        </video>
+        <div class="gallery-caption">
+          <span>💇‍♀️ Peluquería & Depilación</span>
+          <small>Servicios profesionales</small>
+        </div>
       </div>
     </div>
     
-    <div class="gallery-video-item">
-      <video autoplay muted loop playsinline>
-        <source src="img/galeria/video-trabajo-2.mp4" type="video/mp4">
-        Tu navegador no soporta video HTML5.
-      </video>
-      <div class="gallery-caption">
-        <span>💇‍♀️ Corte & Estilo</span>
-        <small>Transformación en tiempo real</small>
+    <!-- FILA 2: FOTOS -->
+    <div class="gallery-fotos">
+      
+      <!-- Box 1: ANTES/DESPUÉS -->
+      <div class="gallery-item-comparativa">
+        <div class="foto-antes">
+          <img src="img/galeria/antes color.jpg" alt="Antes del color">
+          <span class="label">Antes</span>
+        </div>
+        <div class="foto-despues">
+          <img src="img/galeria/despues color.jpg" alt="Después del color">
+          <span class="label">Después</span>
+        </div>
       </div>
-    </div>
-	
-	<div class="gallery-video-item">
-  <video autoplay muted loop playsinline>
-    <source src="img/galeria/video-trabajo-3.mp4" type="video/mp4">
-  </video>
-  <div class="gallery-caption">
-    <span>💇‍♀️ Peluquería & Depilación</span>
-    <small>Servicios profesionales</small>
-  </div>
-</div>
-  </div>
-  
-  <!-- FILA 2: FOTOS (Comparativas + Simples) -->
-  <div class="gallery-fotos">
-    
-    <!-- Box 1: ANTES/DESPUÉS -->
-    <div class="gallery-item-comparativa">
-      <div class="foto-antes">
-        <img src="img/galeria/antes color.jpg" alt="Antes del corte">
-        <span class="label">Antes</span>
+      
+      <!-- Box 2: ANTES/DESPUÉS -->
+      <div class="gallery-item-comparativa">
+        <div class="foto-antes">
+          <img src="img/galeria/antes color 1.jpg" alt="Antes del color">
+          <span class="label">Antes</span>
+        </div>
+        <div class="foto-despues">
+          <img src="img/galeria/despues color 1.jpg" alt="Después del color">
+          <span class="label">Después</span>
+        </div>
       </div>
-      <div class="foto-despues">
-        <img src="img/galeria/despues color.jpg" alt="Después del corte">
-        <span class="label">Después</span>
+      
+      <!-- Box 3: ANTES/DESPUÉS -->
+      <div class="gallery-item-comparativa">
+        <div class="foto-antes">
+          <img src="img/galeria/antes color 2.jpg" alt="Antes del color">
+          <span class="label">Antes</span>
+        </div>
+        <div class="foto-despues">
+          <img src="img/galeria/despues color 2.jpg" alt="Después del color">
+          <span class="label">Después</span>
+        </div>
       </div>
-    </div>
-    
-    <!-- Box 2: ANTES/DESPUÉS -->
-    <div class="gallery-item-comparativa">
-      <div class="foto-antes">
-        <img src="img/galeria/antes color 1.jpg" alt="Antes del corte">
-        <span class="label">Antes</span>
+      
+      <!-- Box 4: DETALLE SERVICIO -->
+      <div class="gallery-item-simple">
+        <img src="img/galeria/corte.jpg" alt="Detalle de corte">
+        <div class="gallery-caption">
+          <span>✂️ Detalle de Corte</span>
+        </div>
       </div>
-      <div class="foto-despues">
-        <img src="img/galeria/despues color 1.jpg" alt="Después del corte">
-        <span class="label">Después</span>
-      </div>
-    </div>
-	
-    <!-- Box 3: ANTES/DESPUÉS -->
-    <div class="gallery-item-comparativa">
-      <div class="foto-antes">
-        <img src="img/galeria/antes color 2.jpg" alt="Antes del corte">
-        <span class="label">Antes</span>
-      </div>
-      <div class="foto-despues">
-        <img src="img/galeria/despues color 2.jpg" alt="Después del corte">
-        <span class="label">Después</span>
-      </div>
+      
     </div>
     
-    <!-- Box 4: DETALLE SERVICIO -->
-    <div class="gallery-item-simple">
-      <img src="img/galeria/corte.jpg" alt="Detalle de corte">
-      <div class="gallery-caption">
-        <span>✂️ Detalle de Corte</span>
-      </div>
-    </div>
-    
-  </div>
-  
-  <p style="margin-top: 20px; font-size: 0.9rem; color: #5d4037; text-align: center;">
-    ¡Cada transformación cuenta una historia!
-  </p>
-</section>
+    <p style="margin-top: 20px; font-size: 0.9rem; color: #5d4037; text-align: center;">
+      ¡Cada transformación cuenta una historia!
+    </p>
+  </section>
 
   <!-- 4. SOBRE MÍ -->
   <section class="section">
@@ -882,7 +758,7 @@ footer a:hover {
 </div>
 
 <footer>
-  <p>© 2026 Estilista Cary –  Color & Depilación</p>
+  <p>© 2026 Estilista Cary – Color & Depilación</p>
   <p>Diseñado por <a href="https://creacionesweb1320.github.io/" target="_blank">Creaciones Web 13:20</a></p>
 </footer>
 
